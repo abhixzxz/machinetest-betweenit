@@ -1,0 +1,10 @@
+.section#intro {
+  padding: 2rem 0;
+}
+
+.section#intro .content-fit {
+  display: flex;
+  gap: 20%;
+  justify-content: space-between;
+  align-items: center;
+}

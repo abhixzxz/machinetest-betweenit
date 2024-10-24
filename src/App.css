@@ -1,0 +1,158 @@
+@import url("https://fonts.cdnfonts.com/css/devil-breeze");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.cdnfonts.com/css/bimbo");
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: #2869f7;
+  font-size: 14px;
+  background-image: url(./assets/images/bg.png),
+    repeating-linear-gradient(
+      to right,
+      transparent 0 500px,
+      #73814b33 500px 501px
+    );
+  background-size: cover;
+  background-position: center;
+  scroll-behavior: smooth;
+}
+.custom-stroke {
+  color: white;
+  -webkit-text-stroke: 1px #2869f7;
+  text-stroke: 1px white;
+}
+
+.app-container {
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.content-wrapper {
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.content-fit {
+  width: min(1200px, 90vw);
+  margin: auto;
+  position: relative;
+  padding: 2rem;
+}
+
+.section .number {
+  font-family: "devil breeze";
+  font-size: clamp(6rem, 15vw, 15rem);
+  font-weight: bold;
+}
+
+.section .content-fit .title {
+  font-family: "devil breeze";
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: bold;
+}
+
+/* Banner specific styles */
+.section#banner .title {
+  font-size: clamp(3rem, 11vw, 11rem);
+}
+
+.section#banner .title::before {
+  font-size: clamp(3rem, 11vw, 11rem);
+}
+
+/* Intro specific styles */
+.section#intro .content-fit {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .section#intro .content-fit {
+    flex-direction: row;
+    gap: 20%;
+  }
+}
+
+/* Description specific styles */
+.section#description .content-fit {
+  padding-right: clamp(1rem, 5vw, 30%);
+}
+
+.section#description img.decorate {
+  width: min(50vw, 500px);
+  height: auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* Contact specific styles */
+.section#contact table {
+  width: min(800px, 90vw);
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+
+.section#contact .sign {
+  font-size: clamp(4rem, 10vw, 10rem);
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 1rem;
+  }
+
+  .content-fit {
+    padding: 1rem;
+  }
+
+  .section#description .content-fit {
+    padding-right: 1rem;
+  }
+
+  .section#contact table td {
+    display: block;
+    width: 100%;
+    text-align: center !important;
+  }
+
+  .decorate {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+/* Ensure text remains readable on mobile */
+@media screen and (max-width: 480px) {
+  .text-2xl {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .section#contact table {
+    font-size: 1.2rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .section#contact table tr:hover td {
+    color: inherit;
+    border-bottom: 1px dashed #445022;
+  }
+}

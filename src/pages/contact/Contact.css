@@ -1,0 +1,63 @@
+.section#contact {
+  padding: 1rem 0;
+  perspective: 1000px;
+}
+
+.section#contact .content-fit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  transform-style: preserve-3d;
+}
+
+#contact table {
+  width: min(800px, 90vw);
+  padding-top: 1em;
+  font-size: 2em;
+  margin: auto;
+  transform-style: preserve-3d;
+}
+
+#contact table td {
+  padding-block: 0.5em;
+  border-bottom: 1px dashed #445022;
+  transition: all 0.3s ease;
+}
+
+#contact table tr:hover td {
+  color: #2869f7;
+  border-bottom: 1px dashed #2869f7;
+}
+
+#contact table td:nth-child(1) {
+  text-align: left;
+  font-weight: 500;
+  width: 40%;
+}
+
+#contact table td:nth-child(2) {
+  text-align: right;
+  font-weight: 200;
+}
+
+#contact table a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contact table a:hover {
+  color: #2869f7;
+}
+
+#contact .sign {
+  font-family: "Bimbo", sans-serif;
+  font-size: 10em;
+  margin-top: 0.5em;
+  transform-style: preserve-3d;
+  color: white;
+  text-shadow: 0 0 20px rgba(40, 105, 247, 0.5);
+}

@@ -1,0 +1,88 @@
+.chaotic-footer {
+  position: relative;
+  min-height: 300px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  overflow: hidden;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  cursor: none;
+}
+
+.chaotic-element {
+  position: relative;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  cursor: none;
+  user-select: none;
+  will-change: transform;
+}
+
+.chaotic-element.text {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.chaotic-element.social {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+.chaotic-element.decoration {
+  font-size: 2rem;
+  position: absolute;
+}
+
+.chaos-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Custom cursor */
+.chaotic-footer::after {
+  content: "🌪️";
+  position: fixed;
+  font-size: 2rem;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chaotic-element {
+    font-size: 1.2rem;
+  }
+
+  .chaotic-element.social {
+    font-size: 2rem;
+  }
+
+  .chaos-message {
+    font-size: 2rem;
+  }
+}
